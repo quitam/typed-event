@@ -1,10 +1,12 @@
 # typed-event
 
-TypeScript-first EventEmitter with full type inference. Zero dependencies. < 1KB gzipped.
+A lightweight, TypeScript-first EventEmitter with full type inference. Zero dependencies. < 1KB gzipped. Works in Node.js, Bun, Deno, and browser.
 
-[![npm](https://img.shields.io/npm/v/typed-event)](https://www.npmjs.com/package/typed-event)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/typed-event)](https://bundlephobia.com/package/typed-event)
-[![license](https://img.shields.io/npm/l/typed-event)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/@tamphamasd/typed-event)](https://www.npmjs.com/package/@tamphamasd/typed-event)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@tamphamasd/typed-event)](https://bundlephobia.com/package/@tamphamasd/typed-event)
+[![license](https://img.shields.io/npm/l/@tamphamasd/typed-event)](./LICENSE)
+
+> Drop-in replacement for Node.js `EventEmitter` with full TypeScript support — no `any`, no casting, autocomplete on event names and payloads.
 
 ## The problem
 
@@ -32,13 +34,13 @@ emitter.on('order:placed', ({ orderId, total }) => {
 ## Install
 
 ```bash
-npm install typed-event
+npm install @tamphamasd/typed-event
 ```
 
 ## Usage
 
 ```ts
-import { createEmitter } from 'typed-event'
+import { createEmitter } from '@tamphamasd/typed-event'
 
 // 1. Define your event schema once
 const emitter = createEmitter<{
