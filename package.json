@@ -1,8 +1,8 @@
 {
-  "name": "typed-event",
+  "name": "@tamphamasd/typed-event",
   "version": "0.1.0",
   "description": "TypeScript-first EventEmitter with full type inference. Zero dependencies, < 1KB gzipped.",
-  "keywords": ["eventemitter", "events", "typescript", "typed", "pub-sub"],
+  "keywords": ["eventemitter", "events", "typescript", "typed", "pub-sub", "event-emitter", "type-safe", "zero-dependency", "browser", "node"],
   "license": "MIT",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
