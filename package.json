@@ -1,0 +1,34 @@
+{
+  "name": "typed-event",
+  "version": "0.1.0",
+  "description": "TypeScript-first EventEmitter with full type inference. Zero dependencies, < 1KB gzipped.",
+  "keywords": ["eventemitter", "events", "typescript", "typed", "pub-sub"],
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify",
+    "test": "vitest run",
+    "test:types": "npm run build && tsd",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "tsd": "^0.31.0"
+  },
+  "tsd": {
+    "directory": "test"
+  }
+}
